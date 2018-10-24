@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>aliencontrol</name>
+  <version>0.1.0</version>
+  <description>Start and stop external applications from within a ROS node</description>
+  <maintainer email="aschaef@cs.uni-freiburg.de">Alexander Schaefer</maintainer>
+  <license>MIT</license>
+  <url type="website">https://github.com/acschaefer/aliencontrol</url>
+  <author email="aschaef@cs.uni-freiburg.de">Alexander Schaefer</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+</package>
