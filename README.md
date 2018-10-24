@@ -24,20 +24,20 @@ The aliencontrol package helps keep the startup and shutdown procedure of the wh
 
 You can start aliencontrol as a node in your roslaunch script like so:
 ```xml
-<node pkg="aliencontrol" type="launch" name="aliencontrol_top">
+<node pkg="aliencontrol" type="aliencontrol" name="aliencontrol_top">
     <param name="cmd" value="top"/>
 </node>
 ```
 Or you run it from the command line like so:
 ```bash
-rosrun aliencontrol launch top
+rosrun aliencontrol aliencontrol top
 ```
 
 The aliencontrol node now launches the external application.
 If the external application is a terminal program like `top`, it is launched inside the same terminal where aliencontrol is running.
 If you want to start it in a separate terminal, simply tell aliencontrol to launch a separate terminal and to execute the command inside it:
 ```bash
-rosrun aliencontrol launch "xterm -e top"
+rosrun aliencontrol aliencontrol "xterm -e top"
 ```
 
 At the end, aliencontrol takes care of a clean shutdown:
