@@ -1,4 +1,4 @@
-![aliencontrol logo](images/aliencontrol.png)
+![aliencontrol logo](aliencontrol.png)
 
 # The aliencontrol ROS package
 
