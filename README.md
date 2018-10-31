@@ -25,13 +25,14 @@ The aliencontrol package helps keep the startup and shutdown procedure of the wh
 You can start aliencontrol as a node in your roslaunch script like so:
 ```xml
 <node pkg="aliencontrol" type="aliencontrol" name="aliencontrol_top">
-    <param name="cmd" value="top"/>
+    <param name="cmd" value="'echo Starting top ...; sleep 3; top'"/>
 </node>
 ```
 Or you run it from the command line like so:
 ```bash
-rosrun aliencontrol aliencontrol top
+rosrun aliencontrol aliencontrol "echo Starting top ...; sleep 3; top"
 ```
+If your command has spaces in it, make sure you enclose it in quotes, because aliencontrol expects the command to be a single argument. In the launch file, use nested quotes: `"'command with spaces'".`
 
 The aliencontrol node now launches the external application.
 If the external application is a terminal program like `top`, it is launched inside the same terminal where aliencontrol is running.
